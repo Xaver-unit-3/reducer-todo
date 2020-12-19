@@ -13,11 +13,8 @@ export const todoReducer = (state, action) => {
           return task
         }
       })
-    //  case "FINISHED_TODO":
-    //    return [
-    //      ...state,
-    //      { item: , completed: true, id: }
-    //    ]   
+     case "FINISHED_TODO":
+       return state.filter(task => !task.completed )
     default:
       return state;
   }
